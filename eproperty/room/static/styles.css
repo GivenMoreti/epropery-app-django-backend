@@ -1,0 +1,44 @@
+body{
+  background-color: rgb(12, 11, 11);
+  /* background-color: #fff; */
+  color: white;
+  font-family:monospace, 'Courier New', Courier, ;
+}
+.card{
+  background-color: rgb(48, 47, 47);
+  font-size: 1.1rem;
+  margin: 0.6px;
+  
+}
+nav{
+  height: 30%;
+  /* background-image: linear-gradient(to bottom,rgb(22, 22, 22),rgb(76, 143, 85)); */
+  background-color: rgb(12, 11, 11);
+  border: 0px 0px 0px 1px solid rgb(109, 107, 107);
+  box-shadow: 0 0 5px 10px rgba(51, 48, 48, 0.5);
+  font-size: 1.5rem;
+  
+}
+li,a{
+  color:#fff;
+  text-decoration: none;
+  list-style: none;
+  padding:  10px;
+  margin: 10px;
+  display: inline;
+  cursor: pointer;
+  
+}
+li,a:hover{
+  color: rgb(68, 68, 67);
+}
+
+.footer{
+  opacity: 0.4;
+  text-align: center;
+}
+
+img important{
+  width:30px;
+  height:30px;
+}

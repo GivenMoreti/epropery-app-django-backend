@@ -1,0 +1,58 @@
+{% extends 'room/base.html' %} {% block content %}
+<div class="container">
+<a href="{%url 'more_rooms'%}" class="btn btn-secondary">Family rooms</a>
+<!-- search for rooms based on criteria -->
+<form action="get">
+<input type="text" class="form-control" name="search" placeholder="search"> 
+<input type="submit" class="btn btn-outline-success" value="search">
+</form> 
+<!-- search ends here -->
+
+
+<a href="{% url 'search_query'%}">click ti search</a>
+
+
+
+
+
+
+
+
+
+<div class="room-count">
+   {% if count_rooms %}
+    <h3>Rooms Available is {{count_rooms}}</h3>
+{% endif %}
+  </div>
+
+  <div class="cheaper-rooms">
+    {% if cheaper_rooms %}
+    <h3>Cheaper packages {{cheaper_rooms}}</h3>
+    {% endif %}
+  </div>
+
+  <div class="row">
+    {% for room in rooms %}
+    <div class="col d-flex justify-content-center mb-2">
+      <div class="card" style="width: 18rem">
+        <img src="{{room.image}}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h2 class="card-title">{{room.name}}</h2>
+         
+          <h5 class="card-text">Rooms: {{room.rooms}}</h5>
+          <!-- <p class="card-text">Availability: {{room.is_available}}</p> -->
+          <p class="card-text">Bedrooms: {{room.bedrooms}}</p>
+          <p>R{{room.rent}}</p>
+          
+          <p>Located in {{room.location}}</p>
+          <p>surrounding areas {{room.surrounding_surburb}}</p>
+          <!-- <p>Garage :{{room.has_garage}}</p> -->
+          <p>{{room.area}} sqrm</p>
+          <a href="#" class="btn btn-outline-success">Book Room</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endblock %}
+</div>

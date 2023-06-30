@@ -1,0 +1,32 @@
+{% extends 'room/base.html' %} 
+{% block content %}
+
+<div class="row">
+ 
+  {% for cheaper_room in cheaper_rooms %}
+  <div class="col d-flex justify-content-center mb-2">
+    <div class="card" style="width: 18rem">
+      <img src="{{room.image}}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h2 class="card-title">{{cheaper_room.name}}</h2>
+       
+        <h5 class="card-text">Rooms: {{cheaper_room.rooms}}</h5>
+        <!-- <p class="card-text">Availability: {{room.is_available}}</p> -->
+        <p class="card-text">Bedrooms: {{cheaper_room.bedrooms}}</p>
+        <p>R{{cheaper_room.rent}}</p>
+        
+        <p>Located in {{cheaper_room.location}}</p>
+        <p>surrounding areas {{cheaper_room.surrounding_surburb}}</p>
+        <!-- <p>Garage :{{room.has_garage}}</p> -->
+        <p>{{room.area}} sqrm</p>
+        <a href="#" class="btn btn-outline-success">Book Room</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+
+
+
+{% endblock %}
